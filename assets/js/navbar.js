@@ -23,6 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// ===== MOBILE DROPDOWN FIX =====
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 992) {
+    const btn = document.getElementById("dropdownEditorial");
+    const megaMenu = document.querySelector(".dropdownMegaMenu");
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation(); // หยุด bootstrap แทรก
+
+      if (megaMenu.classList.contains("show")) {
+        megaMenu.classList.remove("show");
+        btn.setAttribute("aria-expanded", "false");
+      } else {
+        megaMenu.classList.add("show");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  }
+});
 
 // ========= DROPDOWN AUTO HOVER *PC LANG =========
 document.addEventListener("DOMContentLoaded", function () {

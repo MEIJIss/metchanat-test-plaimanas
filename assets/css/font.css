@@ -1,0 +1,65 @@
+:root {
+  --fs-h1: clamp(36px, 2.5vw + 24px, 60px);
+  --fs-h2: clamp(30px, 2vw + 20px, 50px);
+  --fs-h3: clamp(26px, 1.5vw + 20px, 40px);
+  --fs-h4: clamp(23px, 1.2vw + 18px, 30px);
+  --fs-h5: clamp(18px, 1vw + 16px, 25px);
+  --fs-h6: clamp(16px, 0.8vw + 14px, 20px);
+  --fs-p: clamp(14px, 0.5vw + 14px, 16px);
+  --fs-small: clamp(12px, 0.25vw + 12px, 14px);
+}
+h1,
+.h1 {
+  font-size: var(--fs-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--fs-h5);
+}
+
+h6,
+.h6 {
+  font-size: var(--fs-h6);
+  line-height: 22px;
+}
+
+p,
+.p {
+  font-size: var(--fs-p);
+}
+
+small,
+.small {
+  font-size: var(--fs-small);
+}
+
+.megesmall {
+  font-size: 12px;
+}
+
+.hanken-grotesk-900 {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.ci-gray-600 {
+  color: #696969;
+}

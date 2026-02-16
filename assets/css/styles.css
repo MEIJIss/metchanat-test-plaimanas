@@ -266,7 +266,7 @@
   justify-content: center;
 }
 
-.newTitleImg {
+/* .newTitleImg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -280,7 +280,7 @@
 
   width: 100%;
   text-align: center;
-}
+} */
 
 .newDescriptionLayout {
   width: 100%;
@@ -402,7 +402,9 @@
   text-align: center;
 
   /* transition: transform 0.15s linear;  */
-  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1); */
+  will-change: transform;
+  backface-visibility: hidden;
   pointer-events: none;
 }
 

@@ -55,7 +55,19 @@ function updateNewPosition() {
   newText.style.transform = `translate(-50%, calc(-50% + ${y}px))`;
 }
 
-window.addEventListener("scroll", updateNewPosition);
+// window.addEventListener("scroll", updateNewPosition);
+let ticking = false;
+function onScrollNew() {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      updateNewPosition();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}
+
+window.addEventListener("scroll", onScrollNew);
 window.addEventListener("resize", updateNewPosition);
 window.addEventListener("load", updateNewPosition);
 
